@@ -33,21 +33,21 @@ const Layout = props => {
               <li className={`nav-home  ${data.pathname === '/' ? 'nav-current' : ""} `} role="menuitem">
                 <Link to={`/`}>Home</Link>
               </li>
-              <li className={`nav-home  ${data.pathname.includes('/bio') ? 'nav-current' : ""} `} role="menuitem">
-                <Link to={`/bio`}>Bio</Link>
+              <li className={`nav-home  ${data.pathname.includes('/about') ? 'nav-current' : ""} `} role="menuitem">
+                <Link to={`/about`}>About</Link>
               </li>
-              <li className={`nav-home  ${data.pathname.includes('/work') ? 'nav-current' : ""} `} role="menuitem">
+              {/* <li className={`nav-home  ${data.pathname.includes('/work') ? 'nav-current' : ""} `} role="menuitem">
                 <Link to={`/work`}>Work</Link>
-              </li>
-              <li className={`nav-home  ${data.pathname.includes('/news') ? 'nav-current' : ""} `} role="menuitem">
+              </li> */}
+              {/* <li className={`nav-home  ${data.pathname.includes('/news') ? 'nav-current' : ""} `} role="menuitem">
                 <Link to={`/news`}>News</Link>
-              </li>
+              </li> */}
               <li className={`nav-home  ${data.pathname.includes('/contact') ? 'nav-current' : ""} `} role="menuitem">
                 <Link to={`/contact`}>Contact</Link>
               </li>
-              <li className={`nav-home  ${data.pathname.includes('/elements') ? 'nav-current' : ""} `} role="menuitem">
+              {/* <li className={`nav-home  ${data.pathname.includes('/elements') ? 'nav-current' : ""} `} role="menuitem">
                 <Link to={`/elements`}>Elements</Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
           <div className="site-head-center">
@@ -58,6 +58,15 @@ const Layout = props => {
           <div className="site-head-right">
             <div className="social-links">
               <Link
+                to={`mailto:info@bercostudio.com`}
+                title="Contact Us via Email"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contact Us via Email"
+              >
+                Contact Us
+              </Link>
+              <Link
                 to={`https://facebook.com/${social.facebook}`}
                 title="Facebook"
                 target="_blank"
@@ -66,25 +75,21 @@ const Layout = props => {
                 Facebook
               </Link>
               <Link
-                to={`https://instagram.com/${social.twitter}`}
+                to={`https://twitter.com/${social.twitter}`}
                 title="Instagram"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Instagram
+                Twitter
               </Link>
-
-              
-              <Link
+              {/* <Link
                 to={`https://github.com/lilxyzz/gatsby-clay`}
                 title="Github"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Github
-              </Link>
-
-              
+              </Link> */}
             </div>
           </div>
         </div>
@@ -95,16 +100,8 @@ const Layout = props => {
         </div>
       </main>
       <footer className="site-foot">
-        &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link> &mdash;
-        Built with {""}
-        <a
-          href="https://gatsbyjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        Gatsby
-        </a>
-         
+        &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link> &ndash;
+        Tel Aviv-Yafo &amp; Quito
       </footer>
     </div>
   )

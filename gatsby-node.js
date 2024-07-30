@@ -51,16 +51,16 @@ exports.createPages = ({ graphql, actions }) => {
         },
       })
     })
-    // Template For work-sub-page
-    const workPage = posts.filter(item => item.node.frontmatter.templateKey === 'work-sub-page')
-    workPage.forEach((post, index) => {
-      const previous = index === workPage.length - 1 ? null : workPage[index + 1].node
-      const next = index === 0 ? null : workPage[index - 1].node
+    // Template For webdev-sub-page
+    const webdevPage = posts.filter(item => item.node.frontmatter.templateKey === 'webdev-sub-page')
+    webdevPage.forEach((post, index) => {
+      const previous = index === webdevPage.length - 1 ? null : webdevPage[index + 1].node
+      const next = index === 0 ? null : webdevPage[index - 1].node
 
       createPage({
         path: post.node.fields.slug.split('/').slice(2, -1).join('/') === '' ? '/' : `/${post.node.fields.slug.split('/').slice(2, -1).join('/')}`,
         component: path.resolve(
-          `src/templates/work-sub-page.js`
+          `src/templates/webdev-sub-page.js`
         ),
         context: {
           slug: post.node.fields.slug,
@@ -69,16 +69,16 @@ exports.createPages = ({ graphql, actions }) => {
         },
       })
     })
-    // Template For exhibitions-sub-page
-    const exhibitionsPage = posts.filter(item => item.node.frontmatter.templateKey === 'exhibitions-sub-page')
-    exhibitionsPage.forEach((post, index) => {
-      const previous = index === exhibitionsPage.length - 1 ? null : exhibitionsPage[index + 1].node
-      const next = index === 0 ? null : exhibitionsPage[index - 1].node
+    // Template For uxui-sub-page
+    const uxuiPage = posts.filter(item => item.node.frontmatter.templateKey === 'uxui-sub-page')
+    uxuiPage.forEach((post, index) => {
+      const previous = index === uxuiPage.length - 1 ? null : uxuiPage[index + 1].node
+      const next = index === 0 ? null : uxuiPage[index - 1].node
 
       createPage({
         path: post.node.fields.slug.split('/').slice(2, -1).join('/') === '' ? '/' : `/${post.node.fields.slug.split('/').slice(2, -1).join('/')}`,
         component: path.resolve(
-          `src/templates/exhibitions-sub-page.js`
+          `src/templates/uxui-sub-page.js`
         ),
         context: {
           slug: post.node.fields.slug,
@@ -87,7 +87,61 @@ exports.createPages = ({ graphql, actions }) => {
         },
       })
     })
-    //   Template For exhibitions-sub-page
+    // Template For logotypes-sub-page
+    const logotypePage = posts.filter(item => item.node.frontmatter.templateKey === 'logotypes-sub-page')
+    logotypePage.forEach((post, index) => {
+      const previous = index === logotypePage.length - 1 ? null : logotypePage[index + 1].node
+      const next = index === 0 ? null : logotypePage[index - 1].node
+
+      createPage({
+        path: post.node.fields.slug.split('/').slice(2, -1).join('/') === '' ? '/' : `/${post.node.fields.slug.split('/').slice(2, -1).join('/')}`,
+        component: path.resolve(
+          `src/templates/logotype-sub-page.js`
+        ),
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
+    // Template For graphic-design-sub-page
+    const graphicDesignPage = posts.filter(item => item.node.frontmatter.templateKey === 'graphic-design-sub-page')
+    graphicDesignPage.forEach((post, index) => {
+      const previous = index === graphicDesignPage.length - 1 ? null : graphicDesignPage[index + 1].node
+      const next = index === 0 ? null : graphicDesignPage[index - 1].node
+
+      createPage({
+        path: post.node.fields.slug.split('/').slice(2, -1).join('/') === '' ? '/' : `/${post.node.fields.slug.split('/').slice(2, -1).join('/')}`,
+        component: path.resolve(
+          `src/templates/graphic-design-sub-page.js`
+        ),
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
+    // Template For multimedia-sub-page
+    const multimediaPage = posts.filter(item => item.node.frontmatter.templateKey === 'multimedia-sub-page')
+    multimediaPage.forEach((post, index) => {
+      const previous = index === multimediaPage.length - 1 ? null : multimediaPage[index + 1].node
+      const next = index === 0 ? null : multimediaPage[index - 1].node
+
+      createPage({
+        path: post.node.fields.slug.split('/').slice(2, -1).join('/') === '' ? '/' : `/${post.node.fields.slug.split('/').slice(2, -1).join('/')}`,
+        component: path.resolve(
+          `src/templates/multimedia-sub-page.js`
+        ),
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
+    //   Template For exhibitions-sub-page <- THIS COMMAND DOES NOT MAKE ANY SENSE att. berco
     const allPage = posts.filter(item =>
       item.node.frontmatter.templateKey !== 'blog-post' &&
       item.node.frontmatter.templateKey !== 'work-sub-page' &&

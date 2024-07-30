@@ -6,6 +6,7 @@
   "author": "Travis lord <travis.lord89@gmail.com> & Abdul Waqar <abdulwaqar844@gmail.com>",
   "dependencies": {
     "gatsby": "^5.13.6",
+    "gatsby-image": "^3.11.0",
     "gatsby-plugin-feed": "^5.13.1",
     "gatsby-plugin-google-analytics": "^5.13.1",
     "gatsby-plugin-image": "^3.13.1",
@@ -25,6 +26,7 @@
     "gatsby-remark-responsive-iframe": "^6.13.1",
     "gatsby-remark-smartypants": "^6.13.1",
     "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-source-remote-file": "^0.5.2",
     "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "netlify-cms-app": "^2.15.72",
@@ -32,6 +34,7 @@
     "prismjs": "^1.16.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-feather": "^2.0.10",
     "react-helmet": "^6.1.0",
     "remark-mdx": "3.0.1",
     "typeface-alegreya": "^1.1.13",
@@ -67,8 +70,9 @@
     "build": "gatsby clean && gatsby build",
     "develop": "gatsby clean && gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "gatsby clean &&  npm run develop",
+    "start": "gatsby clean && npm run develop",
     "serve": "gatsby serve",
+    "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "husky": {

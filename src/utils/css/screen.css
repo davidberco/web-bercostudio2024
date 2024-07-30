@@ -59,8 +59,9 @@ body {
 }
 @media (max-width: 850px) {
   .site-wrapper {
-    padding: 6vw;
+    padding: 3vw;
   }
+  
 }
 
 .page-head {
@@ -69,7 +70,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 13vw 0;
-  max-width: 70%;
+  max-width: 100%;
   margin: auto;
   text-align: center;
 }
@@ -144,7 +145,7 @@ footer.site-foot a {
 .site-head {
   position: relative;
   z-index: 300;
-  margin-top: -10px;
+  /* margin-top: -10px; */
   font-size: 1.35rem;
 }
 
@@ -207,11 +208,11 @@ footer.site-foot a {
   display: block;
   padding: 10px;
   color: var(--color-base);
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1em;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  font-weight: var(--font-heavy);
+  /* text-transform: uppercase; */
+  letter-spacing: 1px;
 }
 
 .site-head-logo:hover {
@@ -282,7 +283,7 @@ footer.site-foot a {
 
 @media (max-width: 850px) {
   .site-head {
-    padding: 0;
+    padding-top: 1em;
   }
   .nav-burger {
     display: block;

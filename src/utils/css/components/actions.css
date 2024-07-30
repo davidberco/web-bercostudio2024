@@ -5,8 +5,9 @@
     display: flex;
     cursor: default;
     list-style: none;
-    margin: calc(var(--margin) * -0.5);
-    padding-left: 0;
+    /* margin: calc(var(--margin) * -0.5);
+    padding-left: 0; */
+    justify-content: center;
 }
 
 .actions li {

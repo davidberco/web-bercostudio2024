@@ -1,0 +1,65 @@
+.avatar-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  flex-wrap: wrap;
+  gap: 2em;
+  
+}
+
+.avatar-main-title {
+  text-align: center;
+}
+
+.avatar-card {
+  margin: 1em 1em;
+  width: 330px;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar {
+  padding-bottom: 2rem;
+  text-align: center;
+  align-items: center;
+  
+}
+
+.avatar img {
+  max-height: 250px;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px var(--midGrey)
+}
+
+.avatar h3 {
+  margin: 0.65em 0 0.35em 0;
+  
+}
+
+.avatar h4 {
+  margin: 0em 0 0.35em 0;
+  font-weight: var(--font-light);
+}
+
+.avatar h6 {
+  margin: 0em 0 0em 0;
+  font-weight: var(--font-light);
+}
+
+/* .nameMember {
+  padding-top: 1.5rem;
+} */
+
+.instagramMember {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-base);
+  font-style: italic;
+  
+  & svg {
+    margin-right: 0.5rem;
+  }
+  
+}

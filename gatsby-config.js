@@ -71,13 +71,21 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
+              linkImagesToOriginal: false,
               maxWidth: 1360,
               withWebp: true,
-              showCaptions: false,
+              showCaptions: true,
+              markdownCaptions: true,
               quality: 75,
               wrapperStyle: `margin: 7vw 0;`,
             },
           },
+          // {
+          //   resolve: require.resolve(`./plugins/gatsby-remark-remote-images`),
+          //   // options: {
+          //   //   name: 'remote-image',
+          //   // },
+          // },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
@@ -91,6 +99,9 @@ module.exports = {
         ],
       },
     },
+    // {
+    //   resolve: 'gatsby-source-remote-file',
+    // },
 
     {
       resolve: "gatsby-plugin-netlify-cms",

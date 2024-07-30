@@ -206,8 +206,7 @@ const indexQuery = graphql`
     }
   }
 `
-
-export default props => (
+const staticQueryFunction = (props) => (
   <StaticQuery
     query={indexQuery}
     render={data => (
@@ -216,6 +215,7 @@ export default props => (
   />
 )
 
+export default staticQueryFunction
 
 // import React from 'react'
 // import { navigate } from 'gatsby-link'
